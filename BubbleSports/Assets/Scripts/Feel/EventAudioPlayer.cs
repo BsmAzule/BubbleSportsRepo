@@ -27,7 +27,7 @@ namespace Feel
 
         private void PlayAudio()
         {
-            RuntimeManager.PlayOneShot(_sfx);
+            RuntimeManager.PlayOneShot(_sfx, transform.position);
         }
     }
 }
