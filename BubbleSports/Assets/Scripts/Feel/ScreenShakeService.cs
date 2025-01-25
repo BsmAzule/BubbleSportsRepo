@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+using System;
+using Events.Core;
+>>>>>>> origin/main
 using Unity.Cinemachine;
 using UnityEngine;
 
@@ -11,6 +16,7 @@ namespace Feel
         [SerializeField]
         private CinemachineImpulseSource _impulseSource;
 
+<<<<<<< HEAD
         public static ScreenShakeService Instance { get; private set; }
 
         private void Awake()
@@ -23,6 +29,29 @@ namespace Feel
             {
                 Destroy(gameObject);
             }
+=======
+        [Header("Event (In)")]
+        [SerializeField]
+        private ScreenShakeEvent _screenShakeEvent;
+
+        private void Awake()
+        {
+            _screenShakeEvent.AddListener(ShakeScreen);
+        }
+        
+        private void OnDestroy()
+        {
+            _screenShakeEvent.RemoveListener(ShakeScreen);
+        }
+
+        private void Update()
+        {
+            if (Camera.main == null)
+            {
+                return;
+            }
+            transform.position = Camera.main.transform.position;
+>>>>>>> origin/main
         }
 
         public void ShakeScreen(float duration, Vector3 velocity, CinemachineImpulseDefinition.ImpulseShapes shapes)
