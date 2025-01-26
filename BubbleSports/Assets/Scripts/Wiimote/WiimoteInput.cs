@@ -26,6 +26,11 @@ public class WiimoteInput : MonoBehaviour
 
     private void Update()
     {
+        if(_wiimote == null)
+        {
+            return;
+        }
+        
         int ret;
         do
         {
