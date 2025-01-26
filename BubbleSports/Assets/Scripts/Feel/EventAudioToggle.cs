@@ -18,6 +18,9 @@ namespace Feel
         [SerializeField]
         private SOEvent _stopEvent;
 
+        [SerializeField]
+        private bool _preventRestart;
+
         private void Awake()
         {
             _playEvent.AddListener(PlayAudio);
@@ -33,6 +36,11 @@ namespace Feel
 
         private void PlayAudio()
         {
+            if (_preventRestart && _source.IsPlaying())
+            {
+                return;
+            }
+
             _source.Play();
         }
 

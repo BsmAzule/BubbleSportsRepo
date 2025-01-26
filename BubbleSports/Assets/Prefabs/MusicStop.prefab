@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7237490516233521880}
-  - component: {fileID: 6921187220671474981}
+  - component: {fileID: 7332291959810326103}
   m_Layer: 0
-  m_Name: Music
+  m_Name: MusicStop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6921187220671474981
+--- !u!114 &7332291959810326103
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,25 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8703687271864824421}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Script: {fileID: 11500000, guid: e96f3c9b7bc79894c874adbba5146419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: 765746549
-      Data2: 1314189355
-      Data3: 1566097283
-      Data4: 1638367686
-    Path: event:/Test
-  Event: 
-  EventPlayTrigger: 1
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
+  _event: {fileID: 11400000, guid: 0477ef7e38944dc4b9829fda3c21b75d, type: 2}
