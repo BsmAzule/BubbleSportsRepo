@@ -10,6 +10,9 @@ public class WiimoteInput : MonoBehaviour
     [SerializeField]
     private Vector2 _accelRange;
 
+    [SerializeField]
+    private float _accelTriggerCooldown;
+
     [Header("Events (In)")]
 
     [SerializeField]
@@ -37,6 +40,8 @@ public class WiimoteInput : MonoBehaviour
     private bool _dPadDown;
     private bool _aButton;
 
+    private float _accelTriggerCooldownTimer;
+
     private void Awake()
     {
         InitWiimotes();
@@ -59,6 +64,8 @@ public class WiimoteInput : MonoBehaviour
                 _wiimote.SendStatusInfoRequest();
             }
         }
+
+        _accelTriggerCooldownTimer -= Time.deltaTime;
 
         int ret;
         do
@@ -91,8 +98,9 @@ public class WiimoteInput : MonoBehaviour
 
             float accelNormalized = Mathf.InverseLerp(_accelRange.x, _accelRange.y, accelVector.magnitude);
 
-            if (accelNormalized > 0f)
+            if (accelNormalized > 0f && _accelTriggerCooldownTimer <= 0f)
             {
+                _accelTriggerCooldownTimer = _accelTriggerCooldown;
                 _accelInputEvent.Raise(new InputData { Value = accelNormalized });
             }
         } while (ret > 0);
