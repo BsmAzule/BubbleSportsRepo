@@ -28,6 +28,9 @@ namespace Events
 
         public void Raise(T value)
         {
+#if UNITY_EDITOR
+            Debug.Log($"Event {name} raised with value {value}");
+#endif
             _internalEvent?.Invoke(value);
             _internalVoidEvent?.Invoke();
         }
