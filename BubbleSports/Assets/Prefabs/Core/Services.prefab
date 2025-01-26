@@ -149,6 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568681056373681632}
   - component: {fileID: 8053973200819091042}
+  - component: {fileID: 942872267962368794}
   m_Layer: 0
   m_Name: WiimoteSetup
   m_TagString: Untagged
@@ -187,6 +188,23 @@ MonoBehaviour:
   _rumbleEvent: {fileID: 11400000, guid: f1c3d5f9a81fc694c957ab02be18ca17, type: 2}
   _AInputEvent: {fileID: 11400000, guid: 183c58585c050324a98987a09a59544c, type: 2}
   _accelInputEvent: {fileID: 11400000, guid: f57eeb31c7d924c48832f17d946e64f7, type: 2}
+  _dpadUpEvent: {fileID: 11400000, guid: b9884b739d928d94abcb1b8d493fe335, type: 2}
+  _dpadDownEvent: {fileID: 11400000, guid: a955fbb1fb2f1ac4cb12551566d5eba4, type: 2}
+--- !u!114 &942872267962368794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376550105977781372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d38ef470822b7474a9fc93803f48c48c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dpadUpEvent: {fileID: 11400000, guid: b9884b739d928d94abcb1b8d493fe335, type: 2}
+  _dpadDownEvent: {fileID: 11400000, guid: a955fbb1fb2f1ac4cb12551566d5eba4, type: 2}
+  _aPressedEvent: {fileID: 11400000, guid: 183c58585c050324a98987a09a59544c, type: 2}
 --- !u!1 &2014298143715881178
 GameObject:
   m_ObjectHideFlags: 0

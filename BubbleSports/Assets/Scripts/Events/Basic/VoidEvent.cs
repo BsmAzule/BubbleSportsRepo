@@ -7,6 +7,9 @@ namespace Events
     {
         public void Raise()
         {
+#if UNITY_EDITOR
+            Debug.Log($"Void Event {name} raised");
+#endif
             _internalVoidEvent?.Invoke();
         }
     }

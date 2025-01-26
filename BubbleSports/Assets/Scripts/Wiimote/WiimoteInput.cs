@@ -23,9 +23,19 @@ public class WiimoteInput : MonoBehaviour
     [SerializeField]
     private InputEvent _accelInputEvent;
 
+    [SerializeField]
+    private VoidEvent _dpadUpEvent;
+
+    [SerializeField]
+    private VoidEvent _dpadDownEvent;
+
     private Wiimote _wiimote;
 
     private float _rumbleDuration;
+
+    private bool _dPadUp;
+    private bool _dPadDown;
+    private bool _aButton;
 
     private void Awake()
     {
@@ -54,10 +64,26 @@ public class WiimoteInput : MonoBehaviour
         do
         {
             ret = _wiimote.ReadWiimoteData();
-            if (_wiimote.Button.a)
+            if (_wiimote.Button.a && !_aButton)
             {
                 _AInputEvent.Raise(new InputData { Value = 1 });
             }
+
+            _aButton = _wiimote.Button.a;
+
+            if (_wiimote.Button.d_up && !_dPadUp)
+            {
+                _dpadUpEvent.Raise();
+            }
+
+            _dPadUp = _wiimote.Button.d_up;
+
+            if (_wiimote.Button.d_down && !_dPadDown)
+            {
+                _dpadDownEvent.Raise();
+            }
+
+            _dPadDown = _wiimote.Button.d_down;
 
             float[] accelData = _wiimote.Accel.GetCalibratedAccelData();
             var accelVector = new Vector3(accelData[0], accelData[1], accelData[2]);
@@ -105,9 +131,9 @@ public class WiimoteInput : MonoBehaviour
 
     private void FinishedWithWiimotes()
     {
-        foreach (Wiimote remote in WiimoteManager.Wiimotes)
+        if (_wiimote != null)
         {
-            WiimoteManager.Cleanup(remote);
+            WiimoteManager.Cleanup(_wiimote);
         }
     }
 }
