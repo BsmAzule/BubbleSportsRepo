@@ -136,8 +136,56 @@ Transform:
   - {fileID: 3235180489000275409}
   - {fileID: 4000595807178834042}
   - {fileID: 8330482755564257210}
+  - {fileID: 1568681056373681632}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1376550105977781372
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568681056373681632}
+  - component: {fileID: 8053973200819091042}
+  m_Layer: 0
+  m_Name: WiimoteSetup
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1568681056373681632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376550105977781372}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 776980756110597894}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8053973200819091042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376550105977781372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809afc5cb6aee344d998bdaa910dde09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _accelRange: {x: 1.6, y: 2.6}
+  _AInputEvent: {fileID: 11400000, guid: 183c58585c050324a98987a09a59544c, type: 2}
+  _accelInputEvent: {fileID: 11400000, guid: f57eeb31c7d924c48832f17d946e64f7, type: 2}
 --- !u!1 &2014298143715881178
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,6 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputEvent: {fileID: 11400000, guid: 183c58585c050324a98987a09a59544c, type: 2}
+  _inputEvent2: {fileID: 11400000, guid: f57eeb31c7d924c48832f17d946e64f7, type: 2}
 --- !u!1 &6270163831601586569
 GameObject:
   m_ObjectHideFlags: 0

@@ -7605,6 +7605,10 @@ PrefabInstance:
       value: CoreSystems
       objectReference: {fileID: 0}
     - target: {fileID: 8753393857075977031, guid: ff2c23694fbc9324794062114320f091, type: 3}
+      propertyPath: _inputEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: f57eeb31c7d924c48832f17d946e64f7, type: 2}
+    - target: {fileID: 8753393857075977031, guid: ff2c23694fbc9324794062114320f091, type: 3}
       propertyPath: _endDirector
       value: 
       objectReference: {fileID: 1805636855}
