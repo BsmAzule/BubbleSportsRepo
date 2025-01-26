@@ -39,7 +39,6 @@ namespace Feel
 
         public void ShakeScreen(float duration, Vector3 velocity, CinemachineImpulseDefinition.ImpulseShapes shapes)
         {
-            Debug.Log("ASDF");
             _impulseSource.ImpulseDefinition.TimeEnvelope.SustainTime = duration;
             _impulseSource.ImpulseDefinition.ImpulseShape = shapes;
             _impulseSource.GenerateImpulseWithVelocity(velocity);
