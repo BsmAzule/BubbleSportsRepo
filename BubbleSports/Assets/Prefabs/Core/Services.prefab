@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _accelRange: {x: 1.6, y: 2.6}
+  _rumbleEvent: {fileID: 11400000, guid: f1c3d5f9a81fc694c957ab02be18ca17, type: 2}
   _AInputEvent: {fileID: 11400000, guid: 183c58585c050324a98987a09a59544c, type: 2}
   _accelInputEvent: {fileID: 11400000, guid: f57eeb31c7d924c48832f17d946e64f7, type: 2}
 --- !u!1 &2014298143715881178

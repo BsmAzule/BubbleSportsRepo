@@ -40,17 +40,33 @@ MonoBehaviour:
       Slot13: 0
       Slot14: 0
       Slot15: 0
-  EventLength: 2.283
+  EventLength: 0
   eventName: 
   EventReference:
     Guid:
-      Data1: 1037177842
-      Data2: 1217969646
-      Data3: 1580514746
-      Data4: -633187880
-    Path: event:/Awwww
+      Data1: 765746549
+      Data2: 1314189355
+      Data3: 1566097283
+      Data4: 1638367686
+    Path: event:/Test
   StopType: 0
   Parameters: []
+--- !u!114 &-6355394908633087889
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 0
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 79dba980242382c408d73f181790a46e, type: 2}
 --- !u!114 &-6001696806434180519
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,6 +92,7 @@ MonoBehaviour:
     m_Objects:
     - {fileID: 3084399623113035654}
     - {fileID: -54653060198392106}
+    - {fileID: -6355394908633087889}
 --- !u!114 &-5012484075702929147
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -426,7 +443,7 @@ MonoBehaviour:
   m_Version: 3
   m_AnimClip: {fileID: 0}
   m_Locked: 0
-  m_Muted: 0
+  m_Muted: 1
   m_CustomPlayableFullTypename: 
   m_Curves: {fileID: 0}
   m_Parent: {fileID: 11400000}
@@ -500,7 +517,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Awwww
+    m_DisplayName: Test
   m_Markers:
     m_Objects: []
   template:

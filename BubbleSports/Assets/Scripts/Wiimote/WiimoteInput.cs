@@ -1,3 +1,4 @@
+using Events;
 using Events.Core;
 using UnityEngine;
 using WiimoteApi;
@@ -9,6 +10,11 @@ public class WiimoteInput : MonoBehaviour
     [SerializeField]
     private Vector2 _accelRange;
 
+    [Header("Events (In)")]
+
+    [SerializeField]
+    private FloatEvent _rumbleEvent;
+
     [Header("Events (Out)")]
 
     [SerializeField]
@@ -19,18 +25,31 @@ public class WiimoteInput : MonoBehaviour
 
     private Wiimote _wiimote;
 
+    private float _rumbleDuration;
+
     private void Awake()
     {
         InitWiimotes();
+        _rumbleEvent.AddListener(HandleRumbleEvent);
     }
 
     private void Update()
     {
-        if(_wiimote == null)
+        if (_wiimote == null)
         {
             return;
         }
-        
+
+        if (_rumbleDuration > 0f)
+        {
+            _rumbleDuration -= Time.deltaTime;
+            if (_rumbleDuration <= 0f)
+            {
+                _wiimote.RumbleOn = false;
+                _wiimote.SendStatusInfoRequest();
+            }
+        }
+
         int ret;
         do
         {
@@ -56,6 +75,17 @@ public class WiimoteInput : MonoBehaviour
     private void OnDestroy()
     {
         FinishedWithWiimotes();
+        _rumbleEvent.RemoveListener(HandleRumbleEvent);
+    }
+
+    private void HandleRumbleEvent(float value)
+    {
+        if (_wiimote != null)
+        {
+            _wiimote.RumbleOn = value > 0f;
+            _wiimote.SendStatusInfoRequest();
+            _rumbleDuration = Mathf.Max(_rumbleDuration, value);
+        }
     }
 
     private void InitWiimotes()
