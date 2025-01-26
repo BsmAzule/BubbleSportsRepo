@@ -328,7 +328,7 @@ PlayableDirector:
   m_GameObject: {fileID: 2014298143715881178}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: b64bf2a82a80f5a41bfecb82f402321c, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 791c16cb2a048ce4faf31b52966ac58a, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
