@@ -446,15 +446,15 @@ MonoBehaviour:
       Slot13: 0
       Slot14: 0
       Slot15: 0
-  EventLength: 1.966
+  EventLength: 2.366
   eventName: 
   EventReference:
     Guid:
-      Data1: 323020062
-      Data2: 1205218183
-      Data3: -1897488989
-      Data4: 646868887
-    Path: event:/Ahhh
+      Data1: 543414081
+      Data2: 1077066549
+      Data3: -20126810
+      Data4: -1768800955
+    Path: event:/Yayy
   StopType: 0
   Parameters: []
 --- !u!114 &-54653060198392106
@@ -483,7 +483,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
-  m_Name: BaseballEnd
+  m_Name: BoxingEnd
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:
@@ -757,7 +757,7 @@ MonoBehaviour:
     m_PreExtrapolationMode: 0
     m_PostExtrapolationTime: 0
     m_PreExtrapolationTime: 0
-    m_DisplayName: Ahhh
+    m_DisplayName: Yayy
   m_Markers:
     m_Objects: []
   template:

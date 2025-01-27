@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bubboxinge
+  m_text: Bubbowlinge
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6eb803d629b1444ca76c50eb96239f1, type: 2}
   m_sharedMaterial: {fileID: 4475750093849596384, guid: e6eb803d629b1444ca76c50eb96239f1, type: 2}
@@ -528,8 +528,6 @@ PlayableDirector:
     value: {fileID: 1520597164}
   - key: {fileID: 7230160398624430138, guid: 3ce0b463b0b4b45e3924a5d31910cc74, type: 2}
     value: {fileID: 1127010400}
-  - key: {fileID: -1989692640261370729, guid: 3ce0b463b0b4b45e3924a5d31910cc74, type: 2}
-    value: {fileID: 111954949}
   m_ExposedReferences:
     m_References: []
 --- !u!1 &111954945
@@ -552,7 +550,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &111954946
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2407,7 +2405,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BowlingScene
+          m_StringArgument: BoxingScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1127010402
@@ -2925,7 +2923,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BoxingScene
+          m_StringArgument: BowlingScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1520597166
@@ -3164,7 +3162,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bubbowlinge
+  m_text: Bubboxinge
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e6eb803d629b1444ca76c50eb96239f1, type: 2}
   m_sharedMaterial: {fileID: 4475750093849596384, guid: e6eb803d629b1444ca76c50eb96239f1, type: 2}
